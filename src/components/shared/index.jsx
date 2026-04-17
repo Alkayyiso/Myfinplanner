@@ -165,12 +165,12 @@ export const Badge = ({ children, color = "gray", style }) => {
 export const Btn = ({ children, onClick, variant = "outline", size = "md", disabled = false, style }) => {
   const [hov, setHov] = useState(false);
   const sizes = { sm: { padding: "5px 12px", fontSize: 12 }, md: { padding: "8px 16px", fontSize: 13 }, lg: { padding: "11px 20px", fontSize: 14 } };
-  const variants = {
-    outline: { bg: hov ? T.bgSurface : "transparent", border: `0.5px solid ${T.borderMed}`, color: hov ? T.text : T.textMid },
-    primary: { bg: hov ? T.green600  : T.green400,    border: "none", color: "#fff" },
-    ghost:   { bg: hov ? T.bgSurface : "transparent", border: "none", color: T.textMuted },
-    danger:  { bg: hov ? T.red600    : T.red50,       border: `0.5px solid ${T.red100}`, color: hov ? "#fff" : T.red800 },
-  };
+const variants = {
+  outline: { background: hov ? T.bgSurface : "transparent", border: `0.5px solid ${T.borderMed}`, color: hov ? T.text : T.textMid },
+  primary: { background: hov ? T.green600  : T.green400,    border: "none", color: "#fff" },
+  ghost:   { background: hov ? T.bgSurface : "transparent", border: "none", color: T.textMuted },
+  danger:  { background: hov ? T.red600    : T.red50,       border: `0.5px solid ${T.red100}`, color: hov ? "#fff" : T.red800 },
+};
   const v = variants[variant] ?? variants.outline;
   return (
     <button
