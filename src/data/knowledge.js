@@ -76,22 +76,13 @@ export const MEDICAL = {
 // ── BABY CAPITAL OUTLAY — One-time costs ─────────────────────────────────────
 // Source: Modul 2 & 5
 export const BABY_OUTLAY = {
-  clothing:   { min: 3_000_000, max: 5_000_000 },  // pakaian, bedong — Modul 2
-  bath:       { min: 1_000_000, max: 3_000_000 },  // mandi & skincare — Modul 2
-  feeding:    { min: 1_000_000, max: 4_000_000 },  // makan & sterilizer — Modul 2
-  nursing:    { min: 1_000_000, max: 2_000_000 },  // pompa ASI, bra menyusui — Modul 2
-  mobility:   { min: 5_000_000, max: 8_000_000 },  // stroller + car seat — Modul 2
-  aqiqah:     { min: 3_000_000, max: 5_000_000 },  // Jabodetabek rate — Modul 2
-  get total() {
-    return {
-      min: Object.values(this)
-        .filter(v => v?.min)
-        .reduce((a, v) => a + v.min, 0),
-      max: Object.values(this)
-        .filter(v => v?.max)
-        .reduce((a, v) => a + v.max, 0),
-    };
-  },
+  clothing:   { min: 3_000_000, max: 5_000_000 },
+  bath:       { min: 1_000_000, max: 3_000_000 },
+  feeding:    { min: 1_000_000, max: 4_000_000 },
+  nursing:    { min: 1_000_000, max: 2_000_000 },
+  mobility:   { min: 5_000_000, max: 8_000_000 },
+  aqiqah:     { min: 3_000_000, max: 5_000_000 },
+  total:      { min: 14_000_000, max: 27_000_000 },
 };
 
 // ── BABY RECURRING OVERHEAD ───────────────────────────────────────────────────
