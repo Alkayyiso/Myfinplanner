@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Perencana Keuangan Keluarga Jabodetabek 2026–2028" />
+    <title>Perencana Keuangan Keluarga · Jabodetabek</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { font-size: 16px; }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #fafaf8;
+        color: #1a1a1a;
+        min-height: 100vh;
+        padding: 16px;
+      }
+      #root { max-width: 900px; margin: 0 auto; }
+
+      /* Native range slider reset */
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 4px;
+        border-radius: 2px;
+        background: #e0ded8;
+        outline: none;
+        cursor: pointer;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #1D9E75;
+        cursor: pointer;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        transition: transform .15s;
+      }
+      input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+      input[type="range"]::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #1D9E75;
+        cursor: pointer;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      }
+
+      /* Button reset */
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 4px; height: 4px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #d0cec8; border-radius: 2px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
