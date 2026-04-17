@@ -474,6 +474,35 @@ function CalculatorSection({ scenario, onUpdate, year, lang, computed }) {
               </Stack>
             )}
           </Card>
+          {/* ── Wedding Planning ── */}
+          {(scenario.weddingMonthsFromNow !== null && scenario.weddingMonthsFromNow !== undefined) && (
+            <>
+              <SectionLabel>{lang === "id" ? "Rencana Pernikahan" : "Wedding Planning"}</SectionLabel>
+              <Card style={{ marginBottom: 12 }}>
+                <SliderRow
+                  label={lang === "id" ? "Bulan menuju pernikahan" : "Months until wedding"}
+                  min={1} max={36} step={1}
+                  value={scenario.weddingMonthsFromNow ?? 12}
+                  onChange={v => onUpdate({ weddingMonthsFromNow: v })}
+                  display={`${scenario.weddingMonthsFromNow ?? 12} ${lang === "id" ? "bulan" : "mo"}`}
+                />
+                <SliderRow
+                  label={lang === "id" ? "Target biaya pernikahan" : "Wedding budget target"}
+                  min={10e6} max={200e6} step={5e6}
+                  value={scenario.weddingTargetCost ?? 50e6}
+                  onChange={v => onUpdate({ weddingTargetCost: v })}
+                  display={fmt(scenario.weddingTargetCost ?? 50e6)}
+                />
+                <SliderRow
+                  label={lang === "id" ? "Dana terkumpul saat ini" : "Current savings for wedding"}
+                  min={0} max={200e6} step={1e6}
+                  value={scenario.weddingFundAccumulated ?? 0}
+                  onChange={v => onUpdate({ weddingFundAccumulated: v })}
+                  display={fmt(scenario.weddingFundAccumulated ?? 0)}
+                />
+              </Card>
+            </>
+          )}
         </Stack>
       </Grid2>
 
